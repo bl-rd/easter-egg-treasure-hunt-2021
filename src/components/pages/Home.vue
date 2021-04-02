@@ -7,9 +7,9 @@
         <p class="font:cursive">
             Follow the clues, answer th
         </p>
-        <button @click="handleNext">
+        <BigButton @click="handleNext">
             Begin!
-        </button>
+        </BigButton>
     </div>
 
     <router-view v-else v-slot="{ Component }">
@@ -21,10 +21,17 @@
 
 <script>
 import { ROUTE_KEYS } from '../../router';
+import BigButton from '../inputs/BigButton.vue';
 
 export default {
+    components: {
+        BigButton
+    },
 
-    data: () => ({ clueNo: 0 }),
+    data: () => ({
+        clueNo: 0,
+        canStart: true
+    }),
 
     computed: {
         isHome() {
@@ -47,6 +54,10 @@ export default {
             this.next();
         },
         next() {
+            if (!this.canStart) {
+                return;
+            }
+            this.canStart = false;
             this.$router.push({
                 name: ROUTE_KEYS.CLUE,
                 params: {

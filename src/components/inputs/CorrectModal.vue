@@ -2,14 +2,20 @@
     <div class="modal">
         <h2>{{ outcomeText }}</h2>
 
-        <button @click="handleClick">
+        <BigButton @click="handleClick">
             {{ buttonText }}
-        </button>
+        </BigButton>
     </div>
 </template>
 
 <script>
+import BigButton from './BigButton.vue';
+
 export default {
+    components: {
+        BigButton
+    },
+    
     props: {
         correct: {
             type: Boolean,
