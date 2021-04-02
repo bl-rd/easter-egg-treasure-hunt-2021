@@ -1,9 +1,12 @@
 <template>
     <!-- need the "key" attribute for the transition -->
     <div class="clue" :key="clue">
-        <p>
-            {{ clueText }}
-        </p>
+
+        <div class="clue__text">
+            <p>
+                {{ clueText }}
+            </p>
+        </div>
 
         <AnswerInput :answer="clueAnswer" :inputType="clueInputType" @answer="handleAnswer" />
 
@@ -93,6 +96,12 @@ export default {
 <style scoped>
 .clue {
     min-height: 100px;
+    height: 90vh;
+    overflow: hidden;
+    max-height: 100%;
+
+    display: grid;
+    grid-template-rows: 60% 1fr;
 }
 
 .clue p {

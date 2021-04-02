@@ -1,10 +1,12 @@
 <template>
     <form @submit.prevent="handleSubmit">
-        <label for="input">Your answer:</label>
+        <label for="input">☠ What be yer answer?:</label>
         <input id="input" type="text" v-model="model" v-bind="inputAttrs" @focus="handleFocus"/>
-        <button type="submit">
-            Go
-        </button>
+        <div class="button__wrapper">
+            <button type="submit">
+                Go!
+            </button>
+        </div>
     </form>
 </template>
 
@@ -57,3 +59,32 @@ export default {
     }
 }
 </script>
+
+<style>
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.button__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+button {
+    width: 100%;
+    max-width: 200px;
+    padding: 1rem;
+}
+
+button {
+    outline-offset: 10px;
+}
+</style>
