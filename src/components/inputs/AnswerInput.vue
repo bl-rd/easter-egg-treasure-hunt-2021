@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="handleSubmit">
         <label for="input">Your answer:</label>
-        <input id="input" type="text" v-model="model" v-bind="inputAttrs"/>
+        <input id="input" type="text" v-model="model" v-bind="inputAttrs" @focus="handleFocus"/>
         <button type="submit">
             Go
         </button>
@@ -32,10 +32,7 @@ export default {
         },
         inputAttrs() {
             return this.isNumeric
-                ? {
-                    inputmode: 'numeric',
-                    pattern: '[0-9]*'
-                }
+                ? { inputmode: 'numeric' }
                 : null;
         },
         isCorrect() {
@@ -45,6 +42,9 @@ export default {
     },
 
     methods: {
+        handleFocus() {
+            this.model = null;
+        },
         handleSubmit() {
             const { model } = this;
 

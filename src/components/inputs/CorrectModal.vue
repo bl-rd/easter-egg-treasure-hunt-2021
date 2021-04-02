@@ -17,6 +17,8 @@ export default {
         }
     },
 
+    data: () => ({ inputEl: null }),
+
     computed: {
         outcomeText() {
             return this.correct ? 'Correct!' : 'Too bad me heartie...';
@@ -25,6 +27,15 @@ export default {
         buttonText() {
             return this.correct ? 'Next clue': 'Try again...';
         }
+    },
+
+    mounted() {
+        this.inputEl = document.querySelector('input');
+        this.$el.querySelector('button')?.focus();
+    },
+
+    beforeUnmount() {
+        this.inputEl?.focus();
     },
 
     methods: {
