@@ -20,8 +20,9 @@ main {
   display: grid;
   place-items: center;
   overflow: hidden;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
+  padding: 1rem;
 }
 
 .font\:cursive,
