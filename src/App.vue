@@ -29,12 +29,11 @@ body {
 }
 
 main {
-  display: grid;
-  place-items: center;
   overflow: hidden;
   max-width: 100%;
   min-height: 100%;
   padding: 1rem;
+  padding-top: 5vh;
 }
 
 .font\:cursive,
