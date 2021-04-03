@@ -1,0 +1,1 @@
+.button__wrapper{display:flex;justify-content:center;margin-top:2rem}button{width:100%;max-width:200px;padding:1rem;outline-offset:10px;background:var(--colour-correct);filter:drop-shadow(0 8px 0 rgba(0, 0, 0, .6));border-radius:12px;border:none}button:active{transform:translateY(8px);filter:none}
