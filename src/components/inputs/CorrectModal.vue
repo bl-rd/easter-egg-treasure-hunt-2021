@@ -52,6 +52,14 @@ export default {
         this.inputEl?.focus();
     },
 
+    watch: {
+        correct: function (val) {
+            if (!val) {
+                window.navigator.vibrate(200);
+            }
+        }
+    },
+
     methods: {
         handleClick() {
             const event = this.correct ? 'next' : 'again';
