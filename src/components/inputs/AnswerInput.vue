@@ -43,7 +43,7 @@ export default {
         },
         isCorrect() {
             const { model, answer } = this;
-            return model === answer;
+            return model.toString().toLowerCase() === answer.toString().toLowerCase();
         }
     },
 

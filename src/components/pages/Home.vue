@@ -54,7 +54,7 @@ export default {
             this.next();
         },
         next() {
-            if (!this.canStart) {
+            if (!this.canStart && this.isHome) {
                 return;
             }
             this.canStart = false;
