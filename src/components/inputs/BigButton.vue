@@ -43,4 +43,8 @@ button:active {
     transform: translateY(8px);
     filter: none;
 }
+
+button:focus {
+    outline: none;
+}
 </style>

@@ -56,7 +56,6 @@ export default {
             this.clueNo++;
         },
         next() {
-            console.log('in next!');
             if (!this.canStart && this.isHome) {
                 return;
             }

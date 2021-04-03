@@ -100,8 +100,8 @@ export default {
     overflow: hidden;
     max-height: 100%;
 
-    display: grid;
-    grid-template-rows: 60% 1fr;
+    /* display: grid;
+    grid-template-rows: 60% 1fr; */
 }
 
 .clue p {

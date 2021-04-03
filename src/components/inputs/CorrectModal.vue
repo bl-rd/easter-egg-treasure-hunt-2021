@@ -1,6 +1,10 @@
 <template>
     <div class="modal">
         <h2>{{ outcomeText }}</h2>
+        
+        <p class="modal__emoji">
+            {{ emoji }}
+        </p>
 
         <BigButton @click="handleClick">
             {{ buttonText }}
@@ -32,6 +36,10 @@ export default {
 
         buttonText() {
             return this.correct ? 'Next clue': 'Try again...';
+        },
+
+        emoji() {
+            return this.correct ? '👍' : '☠';
         }
     },
 
@@ -61,5 +69,11 @@ export default {
     top: 5vh;
     left: 5vw;
     background-color: white;
+    text-align: center;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
+}
+
+.modal__emoji {
+    font-size: 5rem;
 }
 </style>
