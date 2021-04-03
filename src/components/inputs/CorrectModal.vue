@@ -70,6 +70,7 @@ export default {
     left: 5vw;
     background-color: white;
     text-align: center;
+    padding-top: 1.5rem;
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
 }
 
