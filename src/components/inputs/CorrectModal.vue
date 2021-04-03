@@ -73,8 +73,8 @@ export default {
 .modal {
     position: absolute;
     width: 90vw;
-    height: 90vh;
-    top: 5vh;
+    min-height: 60vh;
+    top: 15vh;
     left: 5vw;
     background-color: white;
     text-align: center;

@@ -26,12 +26,14 @@ body {
   overflow: hidden;
   min-height: 100vh;
   width: 100vw;
+  display: grid;
+  place-items: center;
 }
 
 main {
   overflow: hidden;
   max-width: 100%;
-  min-height: 100%;
+  min-height: 500px;
   padding: 1rem;
   padding-top: 5vh;
 }
