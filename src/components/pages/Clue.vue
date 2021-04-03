@@ -3,7 +3,7 @@
     <div class="clue" :key="clue">
 
         <div class="clue__text">
-            <p>
+            <p class="font:cursive">
                 {{ clueText }}
             </p>
         </div>
@@ -105,7 +105,7 @@ export default {
 }
 
 .clue p {
-    font-family: 'La Belle Aurore', cursive;
-    font-size: 2rem;
+    /* font-family: 'La Belle Aurore', cursive;
+    font-size: 2rem; */
 }
 </style>

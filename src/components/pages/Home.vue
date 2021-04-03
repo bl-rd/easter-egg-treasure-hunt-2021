@@ -30,7 +30,8 @@ export default {
 
     data: () => ({
         clueNo: 0,
-        canStart: true
+        canStart: true,
+        startTime: 0
     }),
 
     computed: {
@@ -52,8 +53,10 @@ export default {
     methods: {
         handleNext() {
             this.next();
+            this.clueNo++;
         },
         next() {
+            console.log('in next!');
             if (!this.canStart && this.isHome) {
                 return;
             }
@@ -61,7 +64,7 @@ export default {
             this.$router.push({
                 name: ROUTE_KEYS.CLUE,
                 params: {
-                    clue: ++this.clueNo
+                    clue: this.clueNo
                 }
             });
         }
@@ -71,7 +74,7 @@ export default {
 function getClueFromRoute(route) {
     let { clue } = route.params;
     clue = clue && parseInt(clue, 10);
-    return clue || 0;
+    return clue || 1;
 }
 </script>
 

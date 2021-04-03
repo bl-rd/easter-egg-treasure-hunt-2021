@@ -1,0 +1,1 @@
+import{o as t,c as e,a,e as n}from"./index.f2ae1a0e.js";const r={props:{type:{type:String,required:!1,default:"button"}}},s={class:"button__wrapper"};r.render=function(r,o,p,i,u,l){return t(),e("div",s,[a("button",{type:p.type,onClick:o[1]||(o[1]=t=>r.$emit("click"))},[a("span",null,[n(r.$slots,"default")])],8,["type"])])};export{r as _};
