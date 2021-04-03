@@ -4,7 +4,7 @@
 
 <style>
 :root {
-  --colour-bg: #d1b515;
+  --colour-bg: #faf8ef;
   --colour-font: #333;
   --colour-correct: #2ACCD1;
   --colour-wrong: #D1008E;
@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 100;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -33,9 +33,8 @@ main {
   place-items: center;
   overflow: hidden;
   max-width: 100%;
-  height: 100%;
+  /* height: 100%; */
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .font\:cursive,

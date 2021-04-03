@@ -60,7 +60,7 @@ export default {
         clueText() {
             return this.clueData?.clue
                 ? `${this.clue}: ${this.clueData.clue}`
-                : 'Ack! There be no clue \'ere.';
+                : 'Ye have reached the end of the hunt. Congratulations!';
         },
         clueAnswer() {
             return this.clueData?.answer;
@@ -96,16 +96,8 @@ export default {
 <style scoped>
 .clue {
     min-height: 100px;
-    height: 90vh;
+    /* height: 90vh; */
     overflow: hidden;
     max-height: 100%;
-
-    /* display: grid;
-    grid-template-rows: 60% 1fr; */
-}
-
-.clue p {
-    /* font-family: 'La Belle Aurore', cursive;
-    font-size: 2rem; */
 }
 </style>
