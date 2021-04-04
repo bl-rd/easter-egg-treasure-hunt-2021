@@ -2,10 +2,7 @@
     <div v-if="isHome">
         <h1>Easter treasure hunt 2021</h1>
         <p class="font:cursive">
-            Finn and Ada, proceed with <strong>caution</strong>&mdash;there be danger ahead.
-        </p>
-        <p class="font:cursive">
-            Follow the clues, answer th
+            Finn and Ada, follow the clues and ye might find some treasure!
         </p>
         <BigButton @click="handleNext">
             Begin!

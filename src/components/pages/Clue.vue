@@ -8,11 +8,13 @@
             </p>
         </div>
 
-        <AnswerInput :answer="clueAnswer" :inputType="clueInputType" @answer="handleAnswer" />
+        <div v-if="!isEnd">
+            <AnswerInput :answer="clueAnswer" :inputType="clueInputType" @answer="handleAnswer" />
 
-        <transition name="fade">
-            <CorrectModal v-if="showCorrectModal" :correct="correctAnswer" @next="handleNext" @again="showCorrectModal = false" />
-        </transition>
+            <transition name="fade">
+                <CorrectModal v-if="showCorrectModal" :correct="correctAnswer" @next="handleNext" @again="showCorrectModal = false" />
+            </transition>
+        </div>
     </div>
 </template>
 
@@ -67,6 +69,9 @@ export default {
         },
         clueInputType() {
             return this.clueData?.inputType;
+        },
+        isEnd() {
+            return this.clue >= 10;
         }
     },
 
