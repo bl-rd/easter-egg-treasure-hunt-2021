@@ -43,6 +43,10 @@ main {
   font-family: 'La Belle Aurore', cursive;
 }
 
+.font\:white-bg {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 p {
   font-size: 1.5rem;
 }

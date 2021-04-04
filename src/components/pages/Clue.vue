@@ -3,7 +3,7 @@
     <div class="clue" :key="clue">
 
         <div class="clue__text">
-            <p class="font:cursive">
+            <p class="font:cursive font:white-bg">
                 {{ clueText }}
             </p>
         </div>
